@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Runner Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="ui">
+        <div class="caudro">
+            <div id="automata">
+                <!--Donde aparecera el automata generado-->
+            </div>
+        
+            <div id="score">
+                <!--muestra cuantos objetos han sido destruidos-->
+            </div>
+        </div>
+
+        <div class="opcion">
+            <button id="start-button">Iniciar Juego</button>
+            <button id="pause-button" style="display: none;">Pausar</button>
+            <button id="resume-button" style="display: none;">Reanudar</button>
+
+            <div id="ammo"></div>
+            <div id="lives"></div>
+            <div id="status"></div>
+            <div id="score"></div>
+        </div>
+    </div>
+
+    <div class="game" id="game-container">
+
+        <div id="character"></div>
+        <div id="game-over" style="display: none;">Game Over</div>
+        
+        <div id="speed">Aceleración: Disponible</div>
+
+        <!--vida y disparos cuadros-->
+        <div id="ammo-container"></div>
+        <div id="lives-container"></div>
+        <!--Barra de carga municion-->
+        <div id="reload-bar-container">
+            <div id="reload-bar"></div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

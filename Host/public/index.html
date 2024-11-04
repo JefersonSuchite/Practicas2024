@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de inicio de sesión -->
+    <div id="login-container">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username-input" placeholder="Ingresa tu nombre">
+        <button id="login-btn">Entrar al chat</button>
+    </div>
+
+    <!-- Encabezado -->
+    <header id="header" style="display: none;">
+        <h1>Mi Aplicación de Chat</h1>
+        <nav>
+            <a href="#" id="home-btn">Inicio</a>
+            <a href="#" id="profile-btn">Perfil</a>
+            <a href="#" id="file-history-btn">Historial de Archivos</a>
+            <a href="#" id="windows-btn">Windows</a>
+            <a href="#" id="ubuntu-btn">Ubuntu</a>
+        </nav>
+    </header>
+
+    <!-- Área de Chat -->
+    <main id="main-container" style="display: none;">
+        <aside id="sidebar">
+            <h2>Usuarios Conectados</h2>
+            <ul id="user-list"></ul>
+        </aside>
+
+        <section id="chat-container">
+            <div id="messages"></div>
+            <input id="message-input" type="text" placeholder="Escribe un mensaje">
+            <button id="send-btn">Enviar</button>
+            <!-- Botón para subir archivos -->
+            <label for="file-input" id="file-upload-label">Subir archivo</label>
+            <input type="file" id="file-input">
+        </section>
+
+        <!-- Historial de Archivos -->
+        <section id="file-history" style="display: none;">
+            <h2>Historial de Archivos</h2>
+            <ul id="file-list"></ul>
+        </section>
+
+        <!-- Secciones de contenido adicional -->
+        <section id="windows-section" style="display: none;">
+            <h2>Sección Windows</h2>
+            <p>Contenido específico de Windows aquí.</p>
+        </section>
+
+        <section id="ubuntu-section" style="display: none;">
+            <h2>Sección Ubuntu</h2>
+            <p>Contenido específico de Ubuntu aquí.</p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="footer" style="display: none;">
+        <p>© 2024 Mi Aplicación de Chat</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

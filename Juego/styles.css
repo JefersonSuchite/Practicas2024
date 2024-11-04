@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 4 / 3; }
+    .ui{ grid-area: 1 / 1 / 4 / 2; }
+    .game { grid-area: 1 / 2 / 4 / 3; }
+    .afd { grid-area: 1 / 1 / 2 / 2; }
+    .cuadro { grid-area: 2 / 1 / 3 / 2; }
+    .div6 { grid-area: 3 / 1 / 4 / 2; }
+
+.ui{
+    position: relative;
+    width: 100%;
+    height: 99%;
+    border: 2px solid black;
+    overflow: hidden;
+    background-color: lightblue ;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+    background-image: url(fondo3.gif);
+}
+
+#character {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-image: url('alien.png');
+    background-size: cover;
+    filter: drop-shadow(10px 10px 10px#0899c681);
+}
+
+.projectile {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#ammo, #lives, #status, #game-over, #score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+}
+
+#ammo { top: 10px; left: 10px; }
+#lives { top: 10px; right: 10px; }
+#score { top: 40px; left: 10px; }
+
+#game-over {
+    font-size: 40px;
+    color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#reload-bar-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    background-color: rgb(129, 210, 237);
+    display: none;
+}
+
+#reload-bar {
+    width: 0;
+    height: 100%;
+    background-color: rgb(0, 255, 0);
+    transition: width 1s linear;
+}
+
+.obstacle {
+    position: absolute;
+    background-color: brown;
+    border-radius: 45%;
+    border: 3px solid rgb(218, 1, 1);
+}
+
+.indicator-container {
+    position: absolute;
+}
+
+#lives-container {
+    top: 10px;
+    right: 10px;
+}
+
+#ammo-container {
+    bottom: 10px;
+    left: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    display: inline-block;
+}
+
+.lives {
+    background-color: red;
+}
+
+.ammo {
+    background-color: yellow;
+}
+
+.lives-lost {
+    background-color: gray;
+}
+
+#speed {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#record-table {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+}
+
+
+/* Barra de recarga */
+#reload-bar-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#reload-bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #00ffa2;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.7);
+    transition: width 0.5s ease;
+}
+
+.boost-object {
+    width: 20px;
+    height: 20px;
+    background-color: yellow; /* Color distintivo */
+    border-radius: 50%; /* Forma de círculo */
+    position: absolute;
+    z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+}
